@@ -6,7 +6,8 @@ let app = express();
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "root123"
+    password: "root123",
+    database: "nodemysql"
 });
 
 db.connect(err => {
