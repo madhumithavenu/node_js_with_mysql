@@ -39,16 +39,16 @@ app.get('/createemployee', (req, res) => {
     })
 })
 
-// app.get('/employee1', (req, res) => {
-//     let post = {
-//         name: 'Bhoomi',
-//         designation: 'Developer',
-//     }
-//     let sql = 'INSERT INTO employee SET ?';
-//     let query = db.query(sql, post, err => {
-//         if (err) {
-//             return err;
-//         }
-//         res.send('Employee Added');
-//     })
-// })
+app.get('/employee1', (req, res) => {
+    let post = {
+        name: 'Bhoomi',
+        designation: 'Developer',
+    }
+    let sql = 'INSERT INTO employee SET ?';
+    let query = db.query(sql, post, err => {
+        if (err) {
+            return err;
+        }
+        res.send('Employee Added');
+    })
+})
