@@ -28,3 +28,27 @@ app.get('/createdb', (req, res) => {
         res.send('database created');
     })
 })
+
+app.get('/createemployee', (req, res) => {
+    let sql = 'CREATE TABLE employee(id INT AUTO_INCREMENT, name VARCHAR(50), designation VARCHAR(50), PRIMARY KEY(id))';
+    db.query(sql, err => {
+        if (err) {
+            return err;
+        }
+        res.send('Employee Table created');
+    })
+})
+
+// app.get('/employee1', (req, res) => {
+//     let post = {
+//         name: 'Bhoomi',
+//         designation: 'Developer',
+//     }
+//     let sql = 'INSERT INTO employee SET ?';
+//     let query = db.query(sql, post, err => {
+//         if (err) {
+//             return err;
+//         }
+//         res.send('Employee Added');
+//     })
+// })
