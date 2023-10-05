@@ -52,3 +52,14 @@ app.get('/employee1', (req, res) => {
         res.send('Employee Added');
     })
 })
+
+app.get('/getemployee', (req, res) => {
+    let sql = 'SELECT * FROM employee';
+    db.query(sql, (err, result) => {
+        if (err) {
+            return err;
+        }
+        console.log(result);
+        res.send('Employee details fetched');
+    })
+})
